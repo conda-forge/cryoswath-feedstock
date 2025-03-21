@@ -1,5 +1,5 @@
 {% set name = "cryoswath" %}
-{% set version = "0.2.1.post4" %}
+{% set version = "0.2.2.post0" %}
 {% set python_min = "3.11" %}
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/cryoswath-{{ version }}.tar.gz
-  sha256: 58a4bc1e6af6ca5b408475dfa20f5690162610e232954661914d87375f9379c1
+  sha256: 17670915d7d28b69bdaf2d038b65d5d87c3d77f2f702081457b3d55f7acf3112
 
 build:
   entry_points:
@@ -26,7 +26,7 @@ requirements:
     - python >={{ python_min }}
     - dask-core
     - defusedxml
-    - geopandas
+    - geopandas >=1.0.1
     - gitpython
     - h5netcdf
     - h5py
