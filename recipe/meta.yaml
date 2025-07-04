@@ -1,5 +1,5 @@
 {% set name = "cryoswath" %}
-{% set version = "0.2.2.post1" %}
+{% set version = "0.2.3" %}
 {% set python_min = "3.11" %}
 
 package:
@@ -35,6 +35,7 @@ requirements:
     - numpy
     - packaging
     - pandas
+    - pdemtools
     - pyarrow
     - pyogrio
     - pyproj
@@ -73,7 +74,7 @@ about:
   license: MIT
   license_family: MIT
   license_file: LICENSE.txt
-  doc_url: https://j-haacker.github.io/cryoswath
+  doc_url: https://cryoswath.readthedocs.io/
 
 extra:
   recipe-maintainers:
