@@ -9,7 +9,7 @@ Package license: MIT
 
 Summary: Swath processing toolbox for CryoSat-2
 
-Documentation: https://j-haacker.github.io/cryoswath
+Documentation: https://cryoswath.readthedocs.io/
 
 cryoswath is a python package containing processing pipelines, a tool
 library, and some pre-assembled data to retrieve and study CryoSat-2
