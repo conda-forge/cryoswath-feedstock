@@ -47,7 +47,7 @@ requirements:
     - shapely
     - statsmodels
     - tqdm
-    - xarray<2025
+    - xarray <2025
     - zarr
 
 test:
