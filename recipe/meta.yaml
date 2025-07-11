@@ -1,5 +1,5 @@
 {% set name = "cryoswath" %}
-{% set version = "0.2.3" %}
+{% set version = "0.2.2.post2" %}
 {% set python_min = "3.11" %}
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/cryoswath-{{ version }}.tar.gz
-  sha256: 13547aa5b6fc7506ab47a12cc9b05264e19993255003abe6320e25c5b6176213
+  sha256: a5bf5780042e971ceafe01b271b5af41d939d0b6e7bdfc118d6d82b92d57c213
 
 build:
   entry_points:
@@ -35,7 +35,6 @@ requirements:
     - numpy
     - packaging
     - pandas
-    - pdemtools
     - pyarrow
     - pyogrio
     - pyproj
@@ -48,7 +47,7 @@ requirements:
     - shapely
     - statsmodels
     - tqdm
-    - xarray
+    - xarray <2025
     - zarr
 
 test:
