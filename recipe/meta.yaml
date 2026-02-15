@@ -1,5 +1,5 @@
 {% set name = "cryoswath" %}
-{% set version = "0.2.4" %}
+{% set version = "0.2.5" %}
 {% set python_min = "3.11" %}
 
 package:
@@ -8,11 +8,13 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/cryoswath-{{ version }}.tar.gz
-  sha256: 5cc96afcbc5db0ab761567787e4a06b1a6bc0194778aa277fcce259505812249
+  sha256: dd80270a9d7700ac12a103dc6227294f8b4b41eacb41f7b545874a06693959cd
 
 build:
   entry_points:
     - cryoswath-init = cryoswath.misc:init_project
+    - cryoswath-update-netrc = cryoswath.misc:update_netrc_cli
+    - cryoswath-update-tracks = cryoswath.misc:update_track_database
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
   number: 0
@@ -49,7 +51,7 @@ requirements:
     - stackstac
     - statsmodels
     - tqdm
-    - xarray <2025
+    - xarray >=2025.3,<2025.12
     - zarr
 
 test:
@@ -58,6 +60,8 @@ test:
   commands:
     - pip check
     - cryoswath-init --help
+    - cryoswath-update-netrc --help
+    - cryoswath-update-tracks --help
   requires:
     - python {{ python_min }}
     - pip
