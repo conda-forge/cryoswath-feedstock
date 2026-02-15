@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/cryoswath-{{ version }}.tar.gz
-  sha256: dd80270a9d7700ac12a103dc6227294f8b4b41eacb41f7b545874a06693959cd
+  sha256: 9c347971a37470a0e67f673a015fd132a879e6930e2af3f08e3d10930d7edcc2
 
 build:
   entry_points:
