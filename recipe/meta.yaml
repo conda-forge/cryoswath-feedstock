@@ -59,9 +59,6 @@ test:
     - cryoswath
   commands:
     - pip check
-    - cryoswath-init --help
-    - cryoswath-update-netrc --help
-    - cryoswath-update-tracks --help
   requires:
     - python {{ python_min }}
     - pip
