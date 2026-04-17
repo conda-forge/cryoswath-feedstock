@@ -36,7 +36,7 @@ requirements:
     - matplotlib-base
     - numpy
     - packaging
-    - pandas
+    - pandas >=2,<3
     - pyarrow
     - pyogrio
     - pyproj
@@ -51,7 +51,7 @@ requirements:
     - stackstac
     - statsmodels
     - tqdm
-    - xarray >=2025.3,<2025.12
+    - xarray >=2025.3
     - zarr
 
 test:
