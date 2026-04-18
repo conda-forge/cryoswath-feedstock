@@ -17,7 +17,7 @@ build:
     - cryoswath-update-tracks = cryoswath.misc:update_track_database
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
-  number: 0
+  number: 1
 
 requirements:
   host:
@@ -56,13 +56,17 @@ requirements:
     - zarr
 
 test:
+  source_files:
+    - tests
   imports:
     - cryoswath
   commands:
     - pip check
+    - python -m pytest -q tests/test_*
   requires:
     - python {{ python_min }}
     - pip
+    - pytest
 
 about:
   home: https://github.com/j-haacker/cryoswath
