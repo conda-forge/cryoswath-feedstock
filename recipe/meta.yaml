@@ -56,7 +56,9 @@ requirements:
     - zarr
 
 test:
-  source_files:
+  # The upstream sdist does not ship tests/, so keep the unit suite vendored
+  # in this feedstock and copy it from the recipe into the test environment.
+  files:
     - tests
   imports:
     - cryoswath
