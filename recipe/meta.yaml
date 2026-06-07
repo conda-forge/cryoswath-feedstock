@@ -1,5 +1,5 @@
 {% set name = "cryoswath" %}
-{% set version = "0.2.6" %}
+{% set version = "0.2.6.post2" %}
 {% set python_min = "3.12" %}
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/cryoswath-{{ version }}.tar.gz
-  sha256: 8f75b093908b889e73916331cc14c8ea442b5388753cc567cd52a6ba723de9ca
+  sha256: 3410398a15e73f59879319028cc9d8dad4df7a61c98b421df7f12907832c1d88
 
 build:
   entry_points:
@@ -25,7 +25,7 @@ build:
 requirements:
   host:
     - python {{ python_min }}
-    - flit-core >=3.2
+    - flit-core >=3.11,<4
     - pip
   run:
     - python >={{ python_min }}
@@ -34,7 +34,6 @@ requirements:
     - defusedxml
     - earthaccess >=0.18
     - geopandas >=1.0.1
-    - gitpython
     - h5netcdf
     - h5py
     - keyring
