@@ -24,31 +24,31 @@ requirements:
     - pip
   run:
     - python >={{ python_min }}
-    - bottleneck
+    - bottleneck >=1,<2
     - dask-core
     - defusedxml
-    - geopandas >=1.0.1
-    - gitpython
-    - h5netcdf
-    - h5py
-    - matplotlib-base
-    - numpy
-    - packaging
-    - pandas
-    - pyarrow
+    - geopandas >=1.0.1,<2
+    - gitpython >=3,<4
+    - h5netcdf >=1,<2
+    - h5py >=3,<4
+    - matplotlib-base >=3,<4
+    - numpy >=2,<3
+    - packaging >=24,<25
+    - pandas >=2,<3
+    - pyarrow >=19,<20
     - pyogrio
-    - pyproj
-    - pytables
-    - python-dateutil
-    - rasterio
+    - pyproj >=3,<4
+    - pytables >=3,<4
+    - python-dateutil >=2,<3
+    - rasterio >=1,<2
     - rioxarray
-    - scikit-learn
-    - scipy
-    - shapely
+    - scikit-learn >=1,<2
+    - scipy >=1,<2
+    - shapely >=2,<3
     - statsmodels
-    - tqdm
+    - tqdm >=4,<5
     - xarray <2025
-    - zarr
+    - zarr >=2,<3
 
 test:
   imports:
