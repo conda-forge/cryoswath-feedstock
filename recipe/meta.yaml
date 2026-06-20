@@ -1,5 +1,5 @@
 {% set name = "cryoswath" %}
-{% set version = "0.2.2.post3" %}
+{% set version = "0.2.2.post4" %}
 {% set python_min = "3.11" %}
 
 package:
@@ -8,14 +8,14 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/cryoswath-{{ version }}.tar.gz
-  sha256: ef605c35f7d29ff7639a419e032e19344496062b5f905563072d3c75c17096b4
+  sha256: ec819c68726c148a4083c66f59d49174c43f74090bd02ee6fe24dd52b84f87c7
 
 build:
   entry_points:
     - cryoswath-init = cryoswath.misc:init_project
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
-  number: 1
+  number: 0
 
 requirements:
   host:
@@ -24,31 +24,31 @@ requirements:
     - pip
   run:
     - python >={{ python_min }}
-    - bottleneck
+    - bottleneck >=1,<2
     - dask-core
     - defusedxml
-    - geopandas >=1.0.1
-    - gitpython
-    - h5netcdf
-    - h5py
-    - matplotlib-base
-    - numpy
-    - packaging
-    - pandas
-    - pyarrow
+    - geopandas >=1.0.1,<2
+    - gitpython >=3,<4
+    - h5netcdf >=1,<2
+    - h5py >=3,<4
+    - matplotlib-base >=3,<4
+    - numpy >=2,<3
+    - packaging >=24,<25
+    - pandas >=2,<3
+    - pyarrow >=19,<20
     - pyogrio
-    - pyproj
-    - pytables
-    - python-dateutil
-    - rasterio
+    - pyproj >=3,<4
+    - pytables >=3,<4
+    - python-dateutil >=2,<3
+    - rasterio >=1,<2
     - rioxarray
-    - scikit-learn
-    - scipy
-    - shapely
+    - scikit-learn >=1,<2
+    - scipy >=1,<2
+    - shapely >=2,<3
     - statsmodels
-    - tqdm
+    - tqdm >=4,<5
     - xarray <2025
-    - zarr
+    - zarr >=2,<3
 
 test:
   imports:
