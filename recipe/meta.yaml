@@ -1,5 +1,5 @@
 {% set name = "cryoswath" %}
-{% set version = "0.2.7" %}
+{% set version = "0.2.7.post1" %}
 {% set python_min = "3.12" %}
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/cryoswath-{{ version }}.tar.gz
-  sha256: 21dc9d50f8bac0c8a86a5c0ccd8e1e28354b32c310e1b5afa77ff150b09c51cc
+  sha256: e0bb37404fcf46b60edf4eed61d7eb30f2cd2d464f4feeb047e64bbc1e120f57
 
 build:
   entry_points:
