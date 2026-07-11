@@ -1,5 +1,5 @@
 {% set name = "cryoswath" %}
-{% set version = "0.2.6.post2" %}
+{% set version = "0.2.7" %}
 {% set python_min = "3.12" %}
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/cryoswath-{{ version }}.tar.gz
-  sha256: 3410398a15e73f59879319028cc9d8dad4df7a61c98b421df7f12907832c1d88
+  sha256: 21dc9d50f8bac0c8a86a5c0ccd8e1e28354b32c310e1b5afa77ff150b09c51cc
 
 build:
   entry_points:
@@ -55,7 +55,7 @@ requirements:
     - stackstac
     - statsmodels
     - tqdm
-    - xarray >=2025.3
+    - xarray >=2026.4
     - zarr
 
 test:
