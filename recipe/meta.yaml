@@ -1,5 +1,5 @@
 {% set name = "cryoswath" %}
-{% set version = "0.2.7.post1" %}
+{% set version = "0.2.8" %}
 {% set python_min = "3.12" %}
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/cryoswath-{{ version }}.tar.gz
-  sha256: e0bb37404fcf46b60edf4eed61d7eb30f2cd2d464f4feeb047e64bbc1e120f57
+  sha256: c840d6acf0e0ae7f0cb905bbb8bbc60193fe8576cba602f6bdb31f67b2a99123
 
 build:
   entry_points:
@@ -33,6 +33,7 @@ requirements:
     - dask-core
     - defusedxml
     - earthaccess >=0.18
+    - fasteners
     - geopandas >=1.0.1
     - h5netcdf
     - h5py
@@ -52,7 +53,7 @@ requirements:
     - scikit-learn
     - scipy
     - shapely
-    - stackstac
+    - stackstac >=0.5.1
     - statsmodels
     - tqdm
     - xarray >=2026.4
